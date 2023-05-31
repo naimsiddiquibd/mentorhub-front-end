@@ -42,7 +42,7 @@ const BlogSection = () => {
           <div
             key={data._id}
             data={data}
-            className="max-w-sm rounded-md shadow-md px-2 bg-white py-1 "
+            className="max-w-sm rounded-md shadow-md p-3 bg-white py-1 "
           >
             <img
               src={data.img}
@@ -55,11 +55,11 @@ const BlogSection = () => {
             </div>
             <div className="flex justify-start items-center gap-2 my-1 text-slate-500">
               <IoMdTime></IoMdTime>
-              <h2 className="text-sm "> {data.time}</h2>
+              <h2 className="text-sm ">{data.time}</h2>
             </div>
 
-            <h2 className="my-2 text-gray-800 -semibold text-sm">
-              {data.notice.split(" ").slice(0, 10).join(" ")}...{" "}
+            <h2 className="text-gray-800 font-semibold text-sm my-2">
+              {data.notice.split(" ").slice(0, 13).join(" ")}...{" "}
               <Link to={`/post/${data._id}`}>
                 <strong>See more</strong>
               </Link>
